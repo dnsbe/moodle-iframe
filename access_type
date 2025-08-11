@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Gráfico de Tipo de Acesso</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2em;
+    }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Access Type (2025)</h1>
+  <p>Visualização em gráfico de barras dos tipos de acesso às publicações registadas em 2025.</p>
+
+  <iframe src="https://scilinkdb.wikibase.cloud/query/#defaultView:BarChart&query=PREFIX%20qwb%3A%20%3Chttps%3A%2F%2Fscilinkdb.wikibase.cloud%2Fentity%2F%3E%0APREFIX%20qdp%3A%20%3Chttps%3A%2F%2Fscilinkdb.wikibase.cloud%2Fprop%2Fdirect%2F%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0A%0ASELECT%20%3FaccessTypeLabel%20(COUNT(%3Fitem)%20AS%20%3Fcount)%0AWHERE%20%7B%0A%20%20%3Fitem%20qdp%3AP49%20%3FdatePublished%20.%0A%20%20FILTER(YEAR(%3FdatePublished)%20%3D%202025)%0A%0A%20%20%3Fitem%20qdp%3AP10%20%3FaccessType%20.%0A%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22pt%2Cen%22.%20%7D%0A%7D%0AGROUP%20BY%20%3FaccessTypeLabel%0AORDER%20BY%20DESC(%3Fcount)" allowfullscreen></
